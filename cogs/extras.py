@@ -141,7 +141,7 @@ class Extra(commands.Cog):
 
     @commands.command()
     async def server(self,ctx):
-        embed=discord.Embed(title="[Sopport Server](https://discord.gg/Yq798Dav6b)", description="here you can report bugs or send suggestions about reminds or things to improve the bot", color = self.RandomColor(), timestamp = d.now())
+        embed=discord.Embed(title="Sopport Server", description="here you can report bugs or send suggestions about reminds or things to improve the bot, [Join server!](https://discord.gg/Yq798Dav6b)", color = self.RandomColor(), timestamp = d.now())
         embed.set_thumbnail(url = ctx.guild.me.avatar_url)
         await ctx.send(embed=embed)
 

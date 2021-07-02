@@ -96,7 +96,7 @@ class Extra(commands.Cog):
         )
         embed.set_thumbnail(url = "https://cdn.discordapp.com/attachments/756359270706184222/759891425890140171/NeroChan.png")
         embed.add_field(name = "Server support!", value = "Do you have any questions about the bot or suggestions enter [here!](https://discord.gg/Yq798Dav6b)")
-        embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
         """
         embed.add_image(url = "https://cdn.discordapp.com/attachments/756359270706184222/759193581034143775/MeguExploded.png")
 
@@ -115,13 +115,14 @@ class Extra(commands.Cog):
              
         )
         embed.set_image(url=member.avatar_url)
-        embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
         await ctx.send(embed = embed)
         
     @commands.command()
     async def stats(self,ctx):
         embed=discord.Embed(title="Bot Stats", url="", description="Hi, I am a bot guided to the command remind and among some other things", color = self.RandomColor(), timestamp = d.now())
         embed.add_field(name="👑 Owner:", value="Cry Sun.#0008", inline=True)
+        embed.add_field(name="👑 Co-Owner:", value=".sylex#2803", inline=True)
         embed.add_field(name="📉 Servers:", value=f"{len(self.bot.guilds)}", inline=True)
         embed.add_field(name="💿 Prefix:", value="z!", inline=True)
         embed.add_field(name="📡 Ping:", value= round(self.bot.latency * 1000), inline=True)
@@ -135,7 +136,13 @@ class Extra(commands.Cog):
         embed = discord.Embed(color = self.RandomColor(), timestamp = d.now())
         embed.set_author(name=ctx.guild.name, icon_url=ctx.guild.icon_url)
         embed.set_image(url=ctx.guild.icon_url)
-        embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
+        await ctx.send(embed=embed)
+
+    @commands.command()
+    async def server(self,ctx):
+        embed=discord.Embed(title="[Sopport Server](https://discord.gg/Yq798Dav6b)", description="here you can report bugs or send suggestions about reminds or things to improve the bot", color = self.RandomColor(), timestamp = d.now())
+        embed.set_thumbnail(url = ctx.guild.me.avatar_url)
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -151,7 +158,7 @@ class Extra(commands.Cog):
             e.add_field(name="ID:", value=f"{member.id}")
             e.add_field(name="Nickname:", value=f"{member.nick}")
             e.add_field(name="Roles:", value=roles, inline=False)
-            e.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+            e.set_footer(text = 'Questions or suggestions enter the support server and say so')
             await ctx.send(embed=e)
 
     @commands.command()
@@ -212,7 +219,7 @@ class Extra(commands.Cog):
              description = (f"{error}"),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
     @avatar.error
@@ -223,7 +230,7 @@ class Extra(commands.Cog):
              description = (f"{error}"),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
     #@timer.error
@@ -234,7 +241,7 @@ class Extra(commands.Cog):
              #description = (f"{error}"),
              #color = self.RandomColor()
             #)
-            #embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            #embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             #await ctx.send(embed = embed)
 
     @timer.error
@@ -245,7 +252,7 @@ class Extra(commands.Cog):
              description = (f"{error}"),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
             
     @addvote.error
@@ -256,7 +263,7 @@ class Extra(commands.Cog):
              description = (f"{error}"),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
 def setup(bot):

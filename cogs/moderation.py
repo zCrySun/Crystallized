@@ -23,7 +23,7 @@ class Moderation(commands.Cog):
              color = self.RandomColor(),
              timestamp = d.now()
         )
-        embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
         await member.kick(reason=reason)
         await ctx.send(embed = embed)
 
@@ -36,7 +36,7 @@ class Moderation(commands.Cog):
              color = self.RandomColor(),
              timestamp = d.now()
         )
-        embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
         await member.ban(reason=reason)
         await ctx.send(embed = embed)
 
@@ -57,7 +57,7 @@ class Moderation(commands.Cog):
                  color = self.RandomColor(),
                  timestamp = d.now()
                  )
-                 embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008')
+                 embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
                  await ctx.channel.send(embed = embed)
                  return
     
@@ -69,7 +69,7 @@ class Moderation(commands.Cog):
              description = ("Invalid user."),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)  
 
     @kick.error
@@ -80,7 +80,7 @@ class Moderation(commands.Cog):
              description = ("Invalid user."),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
 def setup(bot):

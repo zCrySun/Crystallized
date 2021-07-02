@@ -60,7 +60,7 @@ class Todo(commands.Cog):
              description = ("Insufficient permits."),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
 def setup(bot):

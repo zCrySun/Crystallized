@@ -21,7 +21,7 @@ class Help(commands.Cog):
         embed.add_field(name="AniGame", value="Lottery, Hourly, rd spawn(e, m, h and i) and rd bt all(this remind has a 20m CD or set CD with command z!aniset (time))", inline=False)
         embed.add_field(name="Not Kohai", value="Raid, Beg, Fish, Hunt, Mine, Pray, Roulette, Petb and Speed boost select your time with command z!ppset (time)", inline=True)
         embed.set_thumbnail(url = ctx.guild.me.avatar_url)
-        embed.set_footer(text="Bot in develpment - if you see any bugs dm me")
+        embed.set_footer(text="Bot in develpment - If you see any error, go to the support server and report it")
         await ctx.send(embed=embed)
 
     @commands.command()
@@ -34,7 +34,7 @@ class Help(commands.Cog):
         embed.add_field(name="Info", value="Information you mention or yours if you use the command only", inline=True)
         embed.add_field(name="Timer", value="Custom reminder, so far you can remind with seconds, minutes and hours (but if you put the days in hours you can do the remind example z!timer 240h), the maximum of remind is 10 days if you try to put more it will not be possible.", inline=False)
         embed.set_thumbnail(url = ctx.guild.me.avatar_url)
-        embed.set_footer(text="Bot in develpment - if you see any bugs dm me")
+        embed.set_footer(text="Bot in develpment - If you see any error, go to the support server and report it")
         await ctx.send(embed=embed)
 
 def setup(bot):

@@ -23,7 +23,7 @@ class Error(commands.Cog):
              description = (f"{error}"),
              color = self.RandomColor()
             )
-            embed.set_footer(text = 'Questions or suggestions Cry Sun.#0008') 
+            embed.set_footer(text = 'Questions or suggestions enter the support server and say so') 
             await ctx.send(embed = embed)
 
  

@@ -146,6 +146,14 @@ class Extra(commands.Cog):
         await ctx.send(embed=embed)
 
     @commands.command()
+    async def vote(self, ctx):
+        embed=discord.Embed(title="Vote", description='''Thanks for supporting the bot !!
+<a:Rainbow_Corgi:856646505389096970> [Click for vote](https://top.gg/bot/700176493015334914/vote)''', color = self.RandomColor())
+        embed.set_thumbnail(url = ctx.guild.me.avatar_url)
+        embed.set_footer(text = 'Questions or suggestions enter the support server and say so')
+        await ctx.send(embed=embed)
+
+    @commands.command()
     async def info(self, ctx, member: discord.Member = None):
             member = ctx.author if not member else member
             roles = ", ".join([role.mention if role.name != "@everyone" else "@everyone" for role in member.roles])

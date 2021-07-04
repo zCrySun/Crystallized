@@ -22,7 +22,7 @@ class Todo(commands.Cog):
         )
         embed.set_author( name=f'{ctx.author.name} how can i help?', icon_url=member.avatar_url)
         embed.add_field(name='Fun Comands', value='8ball  Kiss  Pat  Hug  Slap  Cry  Pout  Poke  Lick  Confused  Bored  Blush  Choose', inline=False)
-        embed.add_field(name='Extras', value='Servericon  Purge  Invite  Ping Avatar  Stats  Info  Timer  Addvote  Server', inline=False)
+        embed.add_field(name='Extras', value='Servericon  Purge  Invite  Ping Avatar  Stats  Info  Timer  Addvote  Server  Vote', inline=False)
         embed.add_field(name='Moderation', value="Kick  Ban", inline=False)
         embed.add_field(name='Remind', value="aniset  ppset", inline=False)
         embed.set_thumbnail(url = ctx.guild.me.avatar_url)

@@ -12,6 +12,28 @@ class Aniremind(commands.Cog):
 
         self.bot.aniraids = self.load_json()
 
+        self.emotes = ["<a:ZeroTwo_clapping:856648400254795837> ",
+        "<a:umuPatPat:758842836715176008> ",
+        "<a:5982_dogeparrot:856654659443228702> ",
+        "<:peeposweat:768289892777066536>",
+        "<a:dog_dance:856645787639611402>",
+        "<:SylWhoa:758585529390071830>",
+        "<a:Rainbow_Corgi:856646505389096970>",
+        "<a:MYAAA:768289976281464842>",
+        "<a:woolo:721817349434638406>",
+        "<a:furretdancee:856595073910177792>",
+        "<a:WooperFire:721817353196929025>",
+        "<a:applecat:856646047920029748>",
+        "<a:ghostboo:856649163483643904>",
+        "<a:blob_rainbow_trash:856647395365617704>",
+        "<a:8237_among_us_vibing:768287841125007361>",
+        "<:OMEGILUL:758842836615036969>",
+        "<a:4165_Hyped_ZeroTwo:856644999129989120>",
+        "<a:107_ZeroHappy:768289780797669377>",
+        "<a:0237kawaii_ping:768289320029126697>",
+        "<:1399_KamaD:768290250522624021>"
+        ]
+        
     def load_json(self):
         with open('./aniraids.json') as file:
             aniraids = json.load(file)
@@ -59,38 +81,38 @@ class Aniremind(commands.Cog):
     #AniGame
         if message.content.lower() == '.hourly':
             await asyncio.sleep(3600)
-            await message.channel.send(f'{message.author.mention} **Hourly listo/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Hourly listo/Ready**')
 
         if message.content.lower() == '.lottery':
             await asyncio.sleep(600)
-            await message.channel.send(f'{message.author.mention} **Lottery lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Lottery lista/Ready**')
 
         if message.content.lower() == '.rd bt all':
             if str(message.author.id) in self.bot.aniraids.keys():
                 await asyncio.sleep(self.bot.aniraids[str(message.author.id)])
             else:
                 await asyncio.sleep(1200)
-            await message.channel.send(f'{message.author.mention} **Raid Battle Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Raid Battle Ready**')
 
         if message.content.lower() == '.rd spawn i':
             await asyncio.sleep(14404)
-            await message.channel.send(f'{message.author.mention} **Spawn raid lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Spawn raid lista/Ready**')
 
         if message.content.lower() == '.rd spawn':
             await asyncio.sleep(14404)
-            await message.channel.send(f'{message.author.mention} **Spawn raid lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Spawn raid lista/Ready**')
 
         if message.content.lower() == '.rd spawn e':
             await asyncio.sleep(14404)
-            await message.channel.send(f'{message.author.mention} **Spawn raid lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Spawn raid lista/Ready**')
 
         if message.content.lower() == '.rd spawn m':
             await asyncio.sleep(14404)
-            await message.channel.send(f'{message.author.mention} **Spawn raid lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Spawn raid lista/Ready**')
 
         if message.content.lower() == '.rd spawn h':
             await asyncio.sleep(14404)
-            await message.channel.send(f'{message.author.mention} **Spawn raid lista/Ready**')
+            await message.channel.send(f'{random.choice(self.emotes)}{message.author.mention}  **Spawn raid lista/Ready**')
 
 
     @commands.Cog.listener()
